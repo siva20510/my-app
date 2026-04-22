@@ -1,0 +1,74 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Main layout */
+.parent {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT SIDEBAR */
+.left {
+  width: 20%;
+  background: #1e293b;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Menu items (use h2 ideally) */
+.left h1 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.left h1:hover {
+  background: #334155;
+}
+
+/* Active (you can toggle this class via JS/Angular) */
+.left h1.active {
+  background: #4f46e5;
+}
+
+/* Push logout to bottom */
+.left button {
+  margin-top: auto;
+  padding: 10px;
+  border: none;
+  background: #ef4444;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.left button:hover {
+  background: #dc2626;
+}
+
+/* RIGHT CONTENT AREA */
+.right {
+  width: 80%;
+  background: #f1f5f9;
+  padding: 20px;
+  overflow-y: auto;
+}
