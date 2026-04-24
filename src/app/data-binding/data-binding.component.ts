@@ -10,8 +10,9 @@ export class DataBindingComponent {
   //providing age
   age:number = 20;
   name:string = "sr";
-  
+
   isInValid:boolean = false;
+  phone:string = "+91"
 
   submit(){
     alert("submitted");
