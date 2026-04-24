@@ -11,6 +11,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DirectivesComponent } from './directives/directives.component';
     HomeComponent,
     WelcomeComponent,
     DataBindingComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
