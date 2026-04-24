@@ -8,13 +8,14 @@ import { Component } from '@angular/core';
 export class DataBindingComponent {
 
   //providing age
-  age:number = 20;
-  name:string = "sr";
+  age:number = 25;
+  name:string = "raj";
+  address:string = "hyd";
 
   isInValid:boolean = false;
-  phone:string = "+91"
+  phone:string = "+91-"
 
   submit(){
-    alert("submitted");
+    alert("submittedd");
   }
 }

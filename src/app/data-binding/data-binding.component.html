@@ -4,12 +4,14 @@
 
 <h3>my name is {{name}}</h3>
 <h3>my age is {{age}}</h3>
+<h3>address is {{address}}</h3>
 
 <!-- property binding -->
  <button [disabled]="isInValid">Upload</button>
+ <input type="text" [placeholder]="name">
 
  <!--event binding  -->
- <button (click)="submit()">submit</button>
+ <button (click)="submit()">Submit</button>
 
  <!-- two way binding -->
   <input type="text" [(ngModel)] = "phone">
