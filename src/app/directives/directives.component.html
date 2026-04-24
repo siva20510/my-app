@@ -1,0 +1,40 @@
+<p>directives works!</p>
+<!-- Structural directives: ngfor, ngif -->
+ <!-- attribute directives : [ngStyle], [ngClass] -->
+<!-- For LOOP -->
+<!-- for loop in html is *ngFor -->
+ <p *ngFor="let state of states">{{state}}</p>
+ <ul>
+    <li *ngFor="let state of states">{{state}}</li>
+ </ul>
+<!-- drop down for states -->
+ <select name="" id="">
+    <option value="" *ngFor="let a of states">{{a}}</option>
+ </select>
+ <!-- for loop in table -->
+  <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <!-- used ng style to color if age less than 35 -->
+            <td 
+            [ngStyle]="{'color' : user.age<35?'green':'red'}"
+            [ngClass]="{
+                'young':user.age<35, 
+                'old': user.age>=35
+            }"
+            >{{user.age}}
+            
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+<!-- IF CONDITION -->
+ <p *ngIf="isShow">Helooo</p>
