@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f1f5f9;
+  padding: 25px 30px;
+  color: #0f172a;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 42px;
+  color: #0f172a;
+}
+
+h2 {
+  margin: 25px 0 18px;
+  font-size: 30px;
+}
+
+/* Inputs */
+input {
+  padding: 8px 10px;
+  border: 1px solid #94a3b8;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #3b82f6;
+}
+
+/* Search */
+input[placeholder="search"] {
+  width: 260px;
+  margin-right: 5px;
+}
+
+/* Form labels */
+label {
+  display: inline-block;
+  width: 100px;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+h2 + label,
+label + input {
+  margin-bottom: 8px;
+}
+
+/* Common button style */
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px 4px;
+  transition: 0.3s;
+}
+
+/* Buttons */
+.blue-button {
+  background: #3b82f6;
+  color: white;
+}
+
+.blue-button:hover {
+  background: #2563eb;
+}
+
+.green-button {
+  background: #10b981;
+  color: white;
+}
+
+.green-button:hover {
+  background: #059669;
+}
+
+.red-button {
+  background: #ef4444;
+  color: white;
+}
+
+.red-button:hover {
+  background: #dc2626;
+}
+
+.yellow-button {
+  background: #f59e0b;
+  color: white;
+}
+
+.gray-button {
+  background: #64748b;
+  color: white;
+}
+
+/* Table */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background: #3b82f6;
+  color: white;
+}
+
+th,
+td {
+  padding: 18px;
+  text-align: left;
+  font-size: 18px;
+}
+
+td {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+tbody tr:hover {
+  background: #e0f2fe;
+}
+
+/* Salary colors */
+.low-salary {
+  color: orange;
+  font-weight: 600;
+}
+
+.high-salary {
+  color: green;
+  font-weight: 600;
+}
+
+/* Delete button inside table */
+td .red-button {
+  padding: 10px 20px;
+}

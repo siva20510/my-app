@@ -1,0 +1,64 @@
+<h1>All Users</h1>
+
+<input type="text" placeholder="search" [(ngModel)]="term">
+<button (click)="search()">search</button>
+<br><br>
+
+
+<h2>Create User</h2>
+<label for="">Name:</label>
+<input type="text" [(ngModel)]="name">
+<br>
+<label for="">Age:</label>
+<input type="number" [(ngModel)]="age">
+<br>
+<label for="">Salary:</label>
+<input type="number" [(ngModel)]="salary">
+<br>
+<label for="">Department:</label>
+<input type="text" [(ngModel)]="department">
+<br>
+<label for="">Rating:</label>
+<input type="number" [(ngModel)]="rating">
+<br>
+<button (click)="create()" class="green-button">create</button>
+<br><br>
+
+<button (click)="addBonus()" class="blue-button">2000 bounus</button>
+<button (click)="activeUsers()" class="blue-button">Active Users</button>
+<button (click)="salaryLH()" class="blue-button">Salary Low to High</button>
+<button class="blue-button">Salary High to Low</button>
+<button (click)="totalSalaries()" class="blue-button">Total Salaries</button>
+
+<br><br>
+<table>
+    <thead>
+        <tr>
+            <th>S No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Salary</th>
+            <th>Department</th>
+            <th>Active</th>
+            <th>Rating</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users; let i=index">
+            <td>{{i+1}}</td>
+            <td [ngStyle]="{ 'color': user.isActive==true?'green':'red'}">
+                {{user.name}}
+                <span *ngIf="user.isActive==true"> (A)</span>
+            </td>
+            <td>{{user.age}}</td>
+            <td [ngClass]="{ 'low-salary':user.salary<100000,'high-salary':user.salary>=100000}">{{user.salary}}</td>
+            <td>{{user.department | uppercase}}</td>
+            <td>{{user.isActive ? 'Yes' : 'No' }}</td>
+            <td>{{user.rating}}</td>
+            <td>
+                <button (click)="delete(i)" class="red-button">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
