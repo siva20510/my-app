@@ -18,6 +18,7 @@ import { Products2Component } from './products2/products2.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import {HttpClientModule } from '@angular/common/http';
 import { AccountsComponent } from './accounts/accounts.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AccountsComponent } from './accounts/accounts.component';
     ProductsComponent,
     Products2Component,
     VehiclesComponent,
-    AccountsComponent
+    AccountsComponent,
+    FlipkartComponent
   ],
   imports: [
     BrowserModule,
