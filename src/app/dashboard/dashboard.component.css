@@ -1,74 +1,70 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+/* dashboard full layout */
+.parent{
+    display:flex;
+    min-height:100vh;
 }
 
-/* Main layout */
-.parent {
-  display: flex;
-  height: 100vh;
+/* left menu */
+.left{
+    width:260px;
+    background:#1f2937;
+    color:white;
+    padding:20px;
+    position:sticky;
+    top:0;
+    height:100vh;
+    overflow-y:auto;
+    z-index:1000;   /* keeps sidebar above product cards */
 }
 
-/* LEFT SIDEBAR */
-.left {
-  width: 20%;
-  background: #1e293b;
-  color: white;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
+/* logo */
+.logo{
+    font-size:26px;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:20px;
+    color:#00e676;
 }
 
-/* Logo */
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 30px;
+/* menu items */
+.left h1{
+    font-size:18px;
+    padding:10px;
+    margin-bottom:8px;
+    background:#374151;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-/* Menu items (use h2 ideally) */
-.left h1 {
-  font-size: 16px;
-  margin-bottom: 15px;
-  cursor: pointer;
-  padding: 8px 10px;
-  border-radius: 6px;
-  transition: 0.3s;
+.left h1:hover{
+    background:#4b5563;
 }
 
-/* Hover effect */
-.left h1:hover {
-  background: #334155;
+/* logout button */
+.left button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border:none;
+    border-radius:6px;
+    background:#e53935;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
 }
 
-/* Active (you can toggle this class via JS/Angular) */
-.left h1.active {
-  background: #4f46e5;
+/* right content */
+.right{
+    flex:1;
+    padding:15px;
+    overflow:auto;
+    position:relative;
+    z-index:1;
 }
 
-/* Push logout to bottom */
-.left button {
-  margin-top: auto;
-  padding: 10px;
-  border: none;
-  background: #ef4444;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.left button:hover {
-  background: #dc2626;
-}
-
-/* RIGHT CONTENT AREA */
-.right {
-  width: 80%;
-  background: #f1f5f9;
-  padding: 20px;
-  overflow-y: auto;
+/* IMPORTANT FIX for product rating */
+.rating{
+    position:relative !important;
+    z-index:1 !important;
 }

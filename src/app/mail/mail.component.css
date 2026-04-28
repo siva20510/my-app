@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* heading */
+p{
+    font-size:28px;
+    font-weight:bold;
+    color:#008000;
+    text-align:center;
+    margin:15px 0 20px;
+}
+
+/* container */
+.mail-container{
+    width:100%;
+    padding:10px;
+}
+
+/* each row */
+.mail-row{
+    display:grid;
+    grid-template-columns:70px 1fr;
+    gap:20px;
+    align-items:center;
+    background:white;
+    padding:14px 18px;
+    margin-bottom:10px;
+    border-radius:6px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.08);
+    font-size:18px;
+}
+
+/* id */
+.mailid{
+    text-align:center;
+}
+
+/* title */
+.title{
+    color:#111;
+}
+
+/* status based style */
+.bold-text{
+    font-weight:bold;
+    color:#111;
+}
+
+.normal-text{
+    font-weight:normal;
+    color:#777;
+}
+
+/* hover */
+.mail-row:hover{
+    background:#f8f8f8;
+}
+
+/* mobile */
+@media(max-width:768px){
+    .mail-row{
+        grid-template-columns:50px 1fr;
+        font-size:14px;
+        gap:10px;
+    }
+
+    p{
+        font-size:22px;
+    }
+}

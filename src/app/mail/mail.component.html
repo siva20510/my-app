@@ -1,0 +1,17 @@
+<p>mail works!</p>
+
+<div class="mail-container">
+
+    <div class="mail-row" *ngFor="let mail of mails">
+
+        <div class="mailid" [ngClass]="mail.completed ? 'normal-text' : 'bold-text'">
+            {{mail.id}}
+        </div>
+
+        <div class="title" [ngClass]="mail.completed ? 'normal-text' : 'bold-text'">
+            {{mail.title}}
+        </div>
+
+    </div>
+
+</div>
