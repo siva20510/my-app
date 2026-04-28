@@ -1,0 +1,22 @@
+<div class="weather-card" *ngIf="a?.current_weather">
+  <h2>Weather in Hyderabad</h2>
+
+  <div class="icon">☀️</div>
+
+  <div class="temp">
+    {{ a.current_weather.temperature }}°C
+  </div>
+
+  <div class="details">
+    <p>Wind Speed: {{ a.current_weather.windspeed }} km/h</p>
+    <p>
+      Wind Direction:
+      {{ a.current_weather.winddirection }}°
+      ({{ getDirection(a.current_weather.winddirection) }})
+    </p>
+  </div>
+
+  <div class="daytime" *ngIf="a.current_weather.is_day === 1">
+    Daytime
+  </div>
+</div>

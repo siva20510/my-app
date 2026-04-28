@@ -1,0 +1,44 @@
+.weather-card {
+  width: 320px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #d3d6db;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.temp {
+  font-size: 48px;
+  font-weight: bold;
+  color: #e69500;
+  margin: 10px 0;
+}
+
+.details {
+  font-size: 16px;
+  color: #444;
+  margin-top: 10px;
+}
+
+.details p {
+  margin: 5px 0;
+}
+
+.daytime {
+  margin-top: 15px;
+  color: #2b8cc4;
+  font-weight: 500;
+  font-size: 18px;
+}
