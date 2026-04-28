@@ -1,0 +1,66 @@
+<p>products2 works!</p>
+<div class="">
+  <div class="">
+    <table>
+      <thead>
+        <tr>
+          <th>S NO</th>
+          <th>name</th>
+          <th>category</th>
+          <th>brand</th>
+          <th>price</th>
+          <th>rating</th>
+          <th>freeDelivery</th>
+          <th>stock</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.category }}</td>
+          <td>{{ product.brand }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.rating }}</td>
+          <td>{{ product.freeDelivery }}</td>
+          <td>{{ product.stock }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="">
+    <input type="text" placeholder="search" [(ngModel)] = "s_text">
+    <button (click)="search()">Search</button>
+    <button (click)="OnlyFreeDelivery()">Only Free Delivery</button>
+    <button (click)="PriceLH()">Price Low to High</button>
+    <button (click)="PriceHL()">Price High to Low</button>
+    <button (click)="ratingLH()">Rating Low to High</button>
+    <button (click)="ratingHL()">Rating High to Low</button>
+    <button (click)="apply50()">Apply 50% Discount</button>
+    <button (click)="priceWithDeliveryCharges()">Price With Delivery Charges</button>
+    <button (click)="totalPrice()">Total Price</button>
+    <button (click)="totalCartItems()">Total Cart Items</button>
+    <button (click)="HighestPriceProduct()">Highest Price Product</button>
+    <button (click)="LowestPriceProduct()">Lowest Price Product</button>
+    <button (click)="HighestRatingProduct()">Highest Rating Product</button>
+    <button (click)="LowestRatingProduct()">Lowest Rating Product</button>
+    <button (click)="onlyInStock()">Only In Stock</button>
+    <button (click)="outOfStock()">Out Of Stock</button>
+    <button (click)="onlyMobiles()">Only Mobiles</button>
+    <button (click)="onlyLaptops()">Only Laptops</button>
+    <button (click)="priceA10000()">Price Above 10000</button>
+    <button (click)="priceB10000()">Price Below 10000</button>
+    <button (click)="ratingA4()">Rating Above 4</button>
+    <button (click)="ratingB4()">Rating Below 4</button>
+    <button (click)="freeDeliveryCount()">Free Delivery Count</button>
+    <button (click)="averageprice()">Average Price</button>
+    <button >Total Stock</button>
+    <button>Name A-Z</button>
+    <button>Name Z-A</button>
+    <button>Double Stock</button>
+    <button>Add GST</button>
+    <button>First 3 Products</button>
+    <button>Last 3 Products</button>
+    <button>Reset Products</button>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+/* Table */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background: #3b82f6;
+  color: white;
+}
+
+th,
+td {
+  padding: 18px;
+  text-align: left;
+  font-size: 18px;
+}
+
+td {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+tbody tr:hover {
+  background: #e0f2fe;
+}
+
+/* Salary colors */
+.low-salary {
+  color: orange;
+  font-weight: 600;
+}
+
+.high-salary {
+  color: green;
+  font-weight: 600;
+}
+
+/* Delete button inside table */
+td .red-button {
+  padding: 10px 20px;
+}

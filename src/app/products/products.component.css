@@ -1,185 +1,210 @@
+/* ================= GOOGLE FONT ================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ================= RESET ================= */
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-  background:#008b8b;
-  padding:15px;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    min-height:100vh;
+    padding:25px;
 }
 
 /* ================= MAIN CONTAINER ================= */
 .container{
-  width:100%;
-  display:flex;
-  gap:20px;
-  align-items:flex-start;
-  justify-content:space-between;
+    display:flex;
+    gap:25px;
+    align-items:flex-start;
+    justify-content:space-between;
+    margin-bottom:25px;
+}
+
+/* ================= COMMON CARD ================= */
+.left,
+.right{
+    background:rgba(255,255,255,0.95);
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.18);
 }
 
 /* ================= LEFT SIDE ================= */
 .left{
-  width:65%;
-  background:#ffffff;
-  padding:15px;
-  border-radius:8px;
+    width:65%;
 }
 
-/* Search Box */
 .left input{
-  width:220px;
-  height:34px;
-  padding:6px 10px;
-  border:1px solid #ccc;
-  border-radius:4px;
-  margin-right:8px;
-  margin-bottom:10px;
-  font-size:13px;
+    width:260px;
+    height:42px;
+    padding:10px 14px;
+    border:1px solid #dcdcdc;
+    border-radius:10px;
+    outline:none;
+    font-size:14px;
+    margin-bottom:14px;
+    transition:0.3s;
 }
 
-/* All Buttons */
+.left input:focus{
+    border-color:#0d6efd;
+    box-shadow:0 0 0 3px rgba(13,110,253,0.15);
+}
+
 .left button{
-  min-width:170px;
-  height:38px;
-  padding:6px 10px;
-  border:none;
-  border-radius:4px;
-  margin:6px;
-  font-size:13px;
-  cursor:pointer;
-  color:#fff;
+    border:none;
+    padding:10px 16px;
+    margin:6px;
+    border-radius:10px;
+    font-size:13px;
+    font-weight:600;
+    color:#fff;
+    cursor:pointer;
+    transition:0.3s;
+    min-width:170px;
 }
 
-/* Individual Colors */
-.left button:nth-child(2){
-  background:#0d6efd;
+/* Hover Effect */
+.left button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(0,0,0,0.15);
 }
 
-.left button:nth-child(3){
-  background:#198754;
-}
-
-.left button:nth-child(4),
-.left button:nth-child(5),
-.left button:nth-child(6),
-.left button:nth-child(7){
-  background:#ffc107;
-  color:#000;
-}
-
-.left button:nth-child(8),
-.left button:nth-child(9){
-  background:#dc3545;
-}
-
-.left button:nth-child(10){
-  background:#20c997;
-}
-
-.left button:nth-child(11){
-  background:#6f42c1;
-}
+/* Different Colors */
+.left button:nth-child(2){background:#0d6efd;}
+.left button:nth-child(3){background:#198754;}
+.left button:nth-child(4){background:#ff9800;}
+.left button:nth-child(5){background:#fd7e14;}
+.left button:nth-child(6){background:#6f42c1;}
+.left button:nth-child(7){background:#e83e8c;}
+.left button:nth-child(8){background:#dc3545;}
+.left button:nth-child(9){background:#20c997;}
+.left button:nth-child(10){background:#6610f2;}
+.left button:nth-child(11){background:#343a40;}
 
 /* ================= RIGHT SIDE ================= */
 .right{
-  width:35%;
-  background:#ffffff;
-  padding:15px;
-  border-radius:8px;
+    width:35%;
 }
 
 .right label{
-  display:inline-block;
-  width:110px;
-  font-size:14px;
-  margin-bottom:14px;
+    display:block;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:6px;
+    color:#333;
 }
 
 .right input{
-  width:220px;
-  height:34px;
-  padding:6px 10px;
-  border:1px solid #ccc;
-  border-radius:4px;
-  margin-bottom:14px;
+    width:100%;
+    height:42px;
+    padding:10px 14px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    margin-bottom:14px;
+    outline:none;
+    font-size:14px;
+}
+
+.right input:focus{
+    border-color:#20c997;
+    box-shadow:0 0 0 3px rgba(32,201,151,0.15);
 }
 
 .right button{
-  margin-left:115px;
-  padding:10px 20px;
-  border:none;
-  border-radius:4px;
-  background:#28a745;
-  color:#fff;
-  cursor:pointer;
+    width:100%;
+    height:44px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(135deg,#198754,#20c997);
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.right button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
 }
 
 /* ================= TABLE ================= */
 table{
-  width:100%;
-  margin-top:20px;
-  border-collapse:collapse;
-  background:#2f3640;
-  color:#fff;
+    width:100%;
+    border-collapse:collapse;
+    background:rgba(255,255,255,0.96);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,0.18);
 }
 
 thead{
-  background:#1e272e;
+    background:linear-gradient(135deg,#0d6efd,#6610f2);
+    color:#fff;
 }
 
-th,td{
-  padding:12px;
-  border:1px solid #555;
-  text-align:left;
-  font-size:13px;
+th{
+    padding:15px;
+    font-size:14px;
+    text-align:left;
+}
+
+td{
+    padding:14px;
+    font-size:13px;
+    border-bottom:1px solid #eee;
+}
+
+tbody tr:hover{
+    background:#f8f9fa;
 }
 
 td button{
-  background:#dc3545;
-  color:#fff;
-  border:none;
-  padding:7px 12px;
-  border-radius:4px;
-  cursor:pointer;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    background:#dc3545;
+    color:#fff;
+    font-size:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+td button:hover{
+    background:#bb2d3b;
 }
 
 /* ================= MOBILE ================= */
+@media(max-width:992px){
+    .container{
+        flex-direction:column;
+    }
+
+    .left,
+    .right{
+        width:100%;
+    }
+}
+
 @media(max-width:768px){
 
-  .container{
-    flex-direction:column;
-  }
+    .left button{
+        width:100%;
+        margin:6px 0;
+    }
 
-  .left,
-  .right{
-    width:100%;
-  }
+    .left input{
+        width:100%;
+    }
 
-  .left button{
-    width:100%;
-    min-width:100%;
-    margin:5px 0;
-  }
-
-  .left input,
-  .right input{
-    width:100%;
-  }
-
-  .right label{
-    width:100%;
-    margin-bottom:5px;
-  }
-
-  .right button{
-    margin-left:0;
-    width:100%;
-  }
-
-  table{
-    display:block;
-    overflow-x:auto;
-  }
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
 }

@@ -72,7 +72,7 @@ PriceWithDeliveryCharges(){
   this.products= this.products.map((a:any) => {
     a.price = a.price < 50 ? a.price+100:a.price+0;
      return a;
-  })
+  });
  
 
 }

@@ -1,0 +1,49 @@
+<p>vehicles works!</p>
+<table border="0">
+    <thead>
+        <tr>
+            <th>Vehicle</th>
+            <th>manufacturer</th>
+            <th>Model</th>
+            <th>Type</th>
+            <th>Fuel</th>
+            <th>Color</th>
+            <th>Image</th>
+            <th>Cost</th>
+            <th>tyres</th>
+            <th>Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+            <td>{{vehicle.Vehicle}}</td>
+            <td>{{vehicle.manufacturer}}</td>
+            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.type}}</td>
+            <td>{{vehicle.fuel}}</td>
+            <td>{{vehicle.color}}</td>
+            <td>
+                
+                <img [src]="vehicle.image" alt=""width="100px" height="100px">
+                <!-- another way to load images 
+                 <img src="{{vehicle.image}}" alt="" width="100px" height="100px">
+                 
+                -->
+            </td>
+            <td>{{vehicle.cost}}</td>
+            <td>{{vehicle.tyres}}</td>
+            <td>{{vehicle.id}}</td>
+        </tr>
+    </tbody>
+</table>
+<!-- "Vehicle": "BYD Accord",
+    "manufacturer": "Skoda",
+    "model": "Explorer",
+    "type": "Sedan",
+    "fuel": "Hybrid",
+    "color": "lavender",
+    "image": "https://loremflickr.com/1024/1015?lock=6526448984968431",
+    "cost": "888.49",
+    "tyres": 27,
+    "id": "1"
+  }, -->
