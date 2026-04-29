@@ -42,5 +42,31 @@ export class VehiclesComponent {
       }
     )
   }
+  column:string="";
+  order:string="";
+  sortVehicles(){
+    this.vehicleService.getSortvehicles(this.column,this.order).subscribe(
+      (data:any)=>{
+        this.vehicles=data;
+
+      },(err:any)=>{
+        alert("Internel server error!");
+      }
+    )
+  }
+
+  pageVehicle(page:number){
+    this.vehicleService.getPagedVehicles(page).subscribe(
+      (data:any)=>{
+        this.vehicles=data;
+
+      },(err:any)=>{
+        alert("Internel server error!");
+      }
+    )
+
+  }
+
+
 
 }

@@ -1,6 +1,21 @@
 <p>vehicles works!</p>
 <input type="text" placeholder="Search" [(ngModel)]="term">
 <button (click)="filteredvehicles()"></button>
+
+<label for="">Column:</label>
+<select [(ngModel)]="column">
+    <option value="color">Color</option>
+    <option value="fuel">Fuel</option>
+    <option value="model">Model</option>
+</select>
+
+<label for="">Order:</label>
+<select [(ngModel)]="order">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+</select>
+<button (click)="sortVehicles()">Sort</button>
+
 <table border="0">
     <thead>
         <tr>
@@ -42,14 +57,9 @@
         </tr>
     </tbody>
 </table>
-<!-- "Vehicle": "BYD Accord",
-    "manufacturer": "Skoda",
-    "model": "Explorer",
-    "type": "Sedan",
-    "fuel": "Hybrid",
-    "color": "lavender",
-    "image": "https://loremflickr.com/1024/1015?lock=6526448984968431",
-    "cost": "888.49",
-    "tyres": 27,
-    "id": "1"
-  }, -->
+<!-- creating button for pages like 1,2 -->
+ <button
+    class="yellow-button"
+    (click)="pageVehicle(i+1)"
+    *ngFor="let page of [].constructor(10); let i=index"
+ >{{i+1}}</button>
