@@ -31,5 +31,16 @@ export class VehiclesComponent {
       }
     )
   }
+  term:string="";
+  filteredvehicles(){
+    this.vehicleService.filteredvehicles(this.term).subscribe(
+      (data:any)=>{
+        this.vehicles=data;
+
+      },(err:any)=>{
+        alert("Internel server error!");
+      }
+    )
+  }
 
 }
