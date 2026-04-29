@@ -19,5 +19,17 @@ export class VehiclesComponent {
       }
     )
   }
+  //2- deletevehicle is created and getting id 
+  deleteVehicle(id:string){
+    this.vehicleService.deleteVehicle(id/* the id is passed here*/).subscribe(
+      (data:any)=>{
+        alert("deletion successfull!!!");
+        //we should not use reload in application
+        location.reload();//just to reload after deltion
+      },(err:any)=>{
+        alert("delete failed!");
+      }
+    )
+  }
 
 }
