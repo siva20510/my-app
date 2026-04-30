@@ -1,6 +1,7 @@
 <p>vehicles works!</p>
 <input type="text" placeholder="Search" [(ngModel)]="term">
-<button (click)="filteredvehicles()"></button>
+<button (click)="filteredvehicles()">search</button>
+<button (click)="getVehicleWithParams()">search2</button>
 
 <label for="">Column:</label>
 <select [(ngModel)]="column">
@@ -15,6 +16,7 @@
     <option value="desc">Descending</option>
 </select>
 <button (click)="sortVehicles()">Sort</button>
+<button (click)="getVehicleWithParams()">Sort2</button>
 
 <table border="0">
     <thead>
@@ -61,5 +63,12 @@
  <button
     class="yellow-button"
     (click)="pageVehicle(i+1)"
+    *ngFor="let page of [].constructor(10); let i=index"
+ >{{i+1}}</button>
+ <hr>
+ <!-- 1,2,3 buttons for search2 -->
+  <button
+    class="gray-button"
+    (click)="getVehicleWithParams(i+1)"
     *ngFor="let page of [].constructor(10); let i=index"
  >{{i+1}}</button>
