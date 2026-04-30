@@ -11,12 +11,12 @@ import { PipesComponent } from './pipes/pipes.component';
 import { UsersComponent } from './users/users.component';
 import { ProductsComponent } from './products/products.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { Products2Component } from './products2/products2.component';
 import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from'./weather/weather.component';
-
 const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'dashboard', component:DashboardComponent,children:[
@@ -32,7 +32,8 @@ const routes: Routes = [
     {path:'flipkart',component:FlipkartComponent},
     {path:'products2',component:Products2Component},
     {path:'mails',component:MailComponent},
-    {path:'Weather',component:WeatherComponent}
+    {path:'Weather',component:WeatherComponent},
+    {path:'create-vehicle', component:CreateVehicleComponent}
   ]},
   {path:'',component:LoginComponent},
   {path:'**',component:PageNotFoundComponent}
