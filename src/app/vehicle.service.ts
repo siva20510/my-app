@@ -17,6 +17,8 @@ getVehicle(id:string):Observable<any>{
   return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id);
 }
 
+
+
 //1 id 
 deleteVehicle(id:string):Observable<any>{
   return this.httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id);
@@ -36,5 +38,9 @@ getVehicleWithParams(term:string, column:string, order:string, page:number):Obse
 }
 createVehicl(vehicle:any):Observable<any>{
   return this.httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction",vehicle);
+}
+//to edit the vehicle data and update it
+editVehicle(id:string,vehicle:any):Observable<any>{
+  return this.httpClient.put("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id,vehicle);
 }
 }

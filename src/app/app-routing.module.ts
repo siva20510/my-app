@@ -35,7 +35,8 @@ const routes: Routes = [
     {path:'mails',component:MailComponent},
     {path:'Weather',component:WeatherComponent},
     {path:'create-vehicle', component:CreateVehicleComponent},
-    {path:'vehicle-details/:id',component:VehicleDetailsComponent}
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+    {path:'edit-vehicle/:id',component:CreateVehicleComponent}
 
   ]},
   {path:'',component:LoginComponent},
