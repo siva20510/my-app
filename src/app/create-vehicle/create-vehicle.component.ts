@@ -16,17 +16,18 @@ export class CreateVehicleComponent {
     color: new FormControl(),
     image: new FormControl(),
   });
-  submit(){
+
+  constructor(private vehicleService: VehicleService) {}
+  submit() {
     console.log(this.vehicleForm);
     this.vehicleService.createVehicl(this.vehicleForm.value).subscribe(
-      (data:any)=>{
-        alert("Created Successfully");
+      (data: any) => {
+        alert('Created Successfully');
         this.vehicleForm.reset();
-      },(err:any)=>{
-        alert("Creation failed");
-      }
-    )
+      },
+      (err: any) => {
+        alert('Creation failed');
+      },
+    );
   }
-  constructor(private vehicleService:VehicleService){}
-
 }

@@ -22,6 +22,7 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from './weather/weather.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 
 @NgModule({
   declarations: [
@@ -42,14 +43,15 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
     FlipkartComponent,
     MailComponent,
     WeatherComponent,
-    CreateVehicleComponent
+    CreateVehicleComponent,
+    VehicleDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-  ReactiveFormsModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

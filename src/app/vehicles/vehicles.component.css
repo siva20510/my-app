@@ -1,128 +1,117 @@
-/* ================= RESET ================= */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    padding:25px;
+/* Heading */
+p {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: #2c7be5;
+    margin: 15px 0;
 }
 
-/* ================= HEADING ================= */
-p{
-    text-align:center;
-    font-size:28px;
-    font-weight:bold;
-    color:#ffffff;
-    margin-bottom:20px;
-    text-transform:capitalize;
+/* Inputs & Selects */
+input, select {
+    padding: 6px 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
-/* ================= SEARCH AREA ================= */
-input{
-    width:280px;
-    height:42px;
-    padding:10px 14px;
-    border:none;
-    border-radius:8px;
-    outline:none;
-    font-size:14px;
-    margin-right:10px;
-    margin-bottom:20px;
+/* Labels */
+label {
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 14px;
 }
 
-button{
-    height:42px;
-    padding:0 18px;
-    border:none;
-    border-radius:8px;
-    background:#0d6efd;
-    color:#fff;
-    font-size:14px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s;
+/* Buttons */
+button {
+    padding: 6px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2c7be5;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
 }
 
-button:hover{
-    background:#0b5ed7;
-    transform:translateY(-2px);
+button:hover {
+    background-color: #1a5fd0;
 }
 
-/* ================= TABLE ================= */
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:#ffffff;
-    border-radius:14px;
-    overflow:hidden;
-    box-shadow:0 12px 25px rgba(0,0,0,0.18);
+/* Special Buttons */
+.yellow-button {
+    background-color: #ffc107;
+    color: #000;
 }
 
-thead{
-    background:linear-gradient(135deg,#198754,#20c997);
-    color:#fff;
+.yellow-button:hover {
+    background-color: #e0a800;
 }
 
-th{
-    padding:14px;
-    font-size:14px;
-    text-transform:capitalize;
-    text-align:center;
+.gray-button {
+    background-color: #6c757d;
 }
 
-td{
-    padding:12px;
-    text-align:center;
-    border-bottom:1px solid #e5e5e5;
-    font-size:13px;
-    color:#333;
+.gray-button:hover {
+    background-color: #545b62;
 }
 
-tbody tr:hover{
-    background:#f8f9fa;
+/* Table */
+table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+    font-size: 13px;
 }
 
-/* ================= IMAGE ================= */
-td img{
-    width:90px;
-    height:70px;
-    object-fit:cover;
-    border-radius:8px;
-    border:2px solid #ddd;
+/* Table Header */
+thead {
+    background-color: #2c7be5;
+    color: #fff;
 }
 
-/* ================= DELETE BUTTON ================= */
-td button{
-    background:#dc3545;
-    height:36px;
-    padding:0 14px;
-    font-size:13px;
+th {
+    padding: 10px;
+    text-align: left;
 }
 
-td button:hover{
-    background:#bb2d3b;
+/* Table Body */
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
 }
 
-/* ================= MOBILE ================= */
-@media(max-width:900px){
+/* Row Hover */
+/* tr:hover {
+    background-color: #f5f5f5;
+} */
 
-    input{
-        width:100%;
-        margin-bottom:12px;
-    }
+/* Image */
+img {
+    border-radius: 5px;
+    object-fit: cover;
+}
 
-    button{
-        width:100%;
-        margin-bottom:15px;
-    }
+/* Delete button */
+td button {
+    background-color: #dc3545;
+}
 
-    table{
-        display:block;
-        overflow-x:auto;
-        white-space:nowrap;
-    }
+td button:hover {
+    background-color: #b02a37;
+}
+
+/* Pagination buttons container spacing */
+hr {
+    margin: 15px 0;
 }

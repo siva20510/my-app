@@ -11,6 +11,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { UsersComponent } from './users/users.component';
 import { ProductsComponent } from './products/products.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
+import {VehicleDetailsComponent} from './vehicle-details/vehicle-details.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
@@ -33,7 +34,9 @@ const routes: Routes = [
     {path:'products2',component:Products2Component},
     {path:'mails',component:MailComponent},
     {path:'Weather',component:WeatherComponent},
-    {path:'create-vehicle', component:CreateVehicleComponent}
+    {path:'create-vehicle', component:CreateVehicleComponent},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent}
+
   ]},
   {path:'',component:LoginComponent},
   {path:'**',component:PageNotFoundComponent}

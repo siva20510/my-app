@@ -1,0 +1,61 @@
+/* Title */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #1e293b;
+}
+
+/* Form container */
+form {
+  width: 400px;
+  margin: 20px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Label + input alignment */
+label {
+  display: inline-block;
+  width: 120px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* Inputs */
+input[type="text"] {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Focus */
+input[type="text"]:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 5px rgba(59,130,246,0.3);
+}
+
+/* Submit button */
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* Hover */
+input[type="submit"]:hover {
+  background: #059669;
+}
