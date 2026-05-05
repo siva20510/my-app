@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
+import { Vehicle } from '../vehicle';
 
 @Component({
   selector: 'app-vehicles',
@@ -7,14 +8,14 @@ import { VehicleService } from '../vehicle.service';
   styleUrls: ['./vehicles.component.css'],
 })
 export class VehiclesComponent {
-  vehicles: any = [];
+  vehicles: Vehicle[] = [];
 
   constructor(private vehicleService: VehicleService) {
     vehicleService.getVehicles().subscribe(
-      (data: any) => {
+      (data: Vehicle[]) => {
         this.vehicles = data;
       },
-      (err: any) => {
+      (err: Error) => {
         alert('Internal server error');
       },
     );
@@ -22,12 +23,12 @@ export class VehiclesComponent {
   //2- deletevehicle is created and getting id
   deleteVehicle(id: string) {
     this.vehicleService.deleteVehicle(id /* the id is passed here*/).subscribe(
-      (data: any) => {
+      (data: Vehicle) => {
         alert('deletion successfull!!!');
         //we should not use reload in application
         location.reload(); //just to reload after deltion
       },
-      (err: any) => {
+      (err: Error) => {
         alert('delete failed!');
       },
     );
@@ -35,10 +36,10 @@ export class VehiclesComponent {
   term: string = '';
   filteredvehicles() {
     this.vehicleService.filteredvehicles(this.term).subscribe(
-      (data: any) => {
+      (data: Vehicle[]) => {
         this.vehicles = data;
       },
-      (err: any) => {
+      (err: Error) => {
         alert('Internel server error!');
       },
     );
@@ -47,10 +48,10 @@ export class VehiclesComponent {
   order: string = '';
   sortVehicles() {
     this.vehicleService.getSortvehicles(this.column, this.order).subscribe(
-      (data: any) => {
+      (data: Vehicle[]) => {
         this.vehicles = data;
       },
-      (err: any) => {
+      (err: Error) => {
         alert('Internel server error!');
       },
     );
@@ -58,10 +59,10 @@ export class VehiclesComponent {
 
   pageVehicle(page: number) {
     this.vehicleService.getPagedVehicles(page).subscribe(
-      (data: any) => {
+      (data: Vehicle[]) => {
         this.vehicles = data;
       },
-      (err: any) => {
+      (err: Error) => {
         alert('Internel server error!');
       },
     );
@@ -70,10 +71,10 @@ export class VehiclesComponent {
     this.vehicleService
       .getVehicleWithParams(this.term, this.column, this.order, page)
       .subscribe(
-        (data: any) => {
+        (data: Vehicle[]) => {
           this.vehicles = data;
         },
-        (err: any) => {
+        (err: Error) => {
           alert('Internel server error!');
         },
       );

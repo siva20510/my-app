@@ -1,46 +1,48 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Vehicle } from './vehicle';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VehicleService {
+  baseUrl:string="https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction";
 
   constructor(private httpClient:HttpClient) { }
 
-getVehicles():Observable<any>{
-  return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?limit=10&page=1");
+getVehicles():Observable<Vehicle[]>{
+  return this.httpClient.get<Vehicle[]>(this.baseUrl+"?limit=10&page=1");
 }
 //to get data id website url to view data in new page
-getVehicle(id:string):Observable<any>{
-  return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id);
+getVehicle(id:string):Observable<Vehicle>{
+  return this.httpClient.get<Vehicle>(this.baseUrl+"/"+id);
 }
 
 
 
 //1 id 
-deleteVehicle(id:string):Observable<any>{
-  return this.httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id);
+deleteVehicle(id:string):Observable<Vehicle>{
+  return this.httpClient.delete<Vehicle>(this.baseUrl+"/"+id);
   //provide / at the end of url
 }
-filteredvehicles(term:string):Observable<any>{
-  return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?filter="+term);
+filteredvehicles(term:string):Observable<Vehicle[]>{
+  return this.httpClient.get<Vehicle[]>(this.baseUrl+"?filter="+term);
 }
-getSortvehicles(column:string, order:string):Observable<any>{
-  return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?sortBy="+column+"&order="+order);
+getSortvehicles(column:string, order:string):Observable<Vehicle[]>{
+  return this.httpClient.get<Vehicle[]>(this.baseUrl+"?sortBy="+column+"&order="+order);
 }
-getPagedVehicles(page:number):Observable<any>{
-  return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?limit=10&page="+page);
+getPagedVehicles(page:number):Observable<Vehicle[]>{
+  return this.httpClient.get<Vehicle[]>(this.baseUrl+"?limit=10&page="+page);
 }
-getVehicleWithParams(term:string, column:string, order:string, page:number):Observable<any>{
-  return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?filter="+term+"&sortBy="+column+"&order="+order+"&limit=10&page="+page);
+getVehicleWithParams(term:string, column:string, order:string, page:number):Observable<Vehicle[]>{
+  return this.httpClient.get<Vehicle[]>(this.baseUrl+"?filter="+term+"&sortBy="+column+"&order="+order+"&limit=10&page="+page);
 }
-createVehicl(vehicle:any):Observable<any>{
-  return this.httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction",vehicle);
+createVehicl(vehicle:Vehicle):Observable<Vehicle>{
+  return this.httpClient.post<Vehicle>(this.baseUrl,vehicle);
 }
 //to edit the vehicle data and update it
-editVehicle(id:string,vehicle:any):Observable<any>{
-  return this.httpClient.put("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id,vehicle);
+editVehicle(id:string,vehicle:Vehicle):Observable<Vehicle>{
+  return this.httpClient.put<Vehicle>(this.baseUrl+"/"+id,vehicle);
 }
 }
