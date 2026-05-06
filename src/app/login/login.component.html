@@ -1,12 +1,12 @@
 <div class="parent">
-    <form action="">
+    <form  [formGroup]="loginForm" (ngSubmit)="login()">
         <label for="">Email :</label>
-        <input type="text">
+        <input type="text" formControlName="email">
         <br>
         <label for="">Password:</label>
-        <input type="text">
+        <input type="text" formControlName="password">
         <br>
-        <button routerLink="/dashboard">Login</button>
+        <input type="submit" value="login">
         <!-- the above routerLink will open the dashboard website when clicked -->
     </form>
 

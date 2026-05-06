@@ -18,9 +18,11 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { Products2Component } from './products2/products2.component';
 import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from'./weather/weather.component';
+import { FormControl,FormGroup } from '@angular/forms';
+import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   {path:'login', component:LoginComponent},
-  {path:'dashboard', component:DashboardComponent,children:[
+  {path:'dashboard',canActivate:[AuthGuard], component:DashboardComponent,children:[
     {path:'home',component:HomeComponent},
     {path:'welcome',component:WelcomeComponent},
     {path:'data-binding',component:DataBindingComponent},
