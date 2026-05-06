@@ -20,6 +20,7 @@ import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from'./weather/weather.component';
 import { FormControl,FormGroup } from '@angular/forms';
 import { AuthGuard } from './auth.guard';
+import { NotifyGuard } from './notify.guard';
 const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'dashboard',canActivate:[AuthGuard], component:DashboardComponent,children:[
@@ -36,7 +37,7 @@ const routes: Routes = [
     {path:'products2',component:Products2Component},
     {path:'mails',component:MailComponent},
     {path:'Weather',component:WeatherComponent},
-    {path:'create-vehicle', component:CreateVehicleComponent},
+    {path:'create-vehicle',canDeactivate:[NotifyGuard], component:CreateVehicleComponent},
     {path:'vehicle-details/:id',component:VehicleDetailsComponent},
     {path:'edit-vehicle/:id',component:CreateVehicleComponent}
 
