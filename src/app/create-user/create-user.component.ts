@@ -17,7 +17,10 @@ export class CreateUserComponent {
       pincode : new FormControl(),
     }),
 
-    cards : new FormArray([])
+    cards : new FormArray([]),
+    type: new FormControl(),
+    busFee : new FormControl(),
+    hostelFee : new FormControl(),
   })
 
   get cardFormArray(){
