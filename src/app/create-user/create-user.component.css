@@ -1,0 +1,175 @@
+/* Page */
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #1e293b;
+}
+
+/* Form container */
+form {
+  width: 450px;
+  margin: 20px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Labels */
+label {
+  display: inline-block;
+  width: 130px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #334155;
+  vertical-align: top;
+}
+
+/* Common styles for all form fields */
+input,
+select,
+textarea {
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* Text based inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="color"],
+input[type="file"],
+input[type="range"],
+input[type="hidden"],
+input[type="image"],
+input[type="reset"],
+input[type="button"],
+input[type="submit"],
+select,
+textarea {
+  width: 220px;
+}
+
+/* Textarea */
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Focus effect */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 5px rgba(59,130,246,0.3);
+}
+
+/* Radio and checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+/* File input */
+input[type="file"] {
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+/* Color input */
+input[type="color"] {
+  height: 40px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+/* Range input */
+input[type="range"] {
+  cursor: pointer;
+}
+
+/* Buttons */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  width: 100%;
+  padding: 10px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+/* Hover effect */
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover {
+  background: #059669;
+}
+
+/* Disabled fields */
+input:disabled,
+select:disabled,
+textarea:disabled {
+  background: #e2e8f0;
+  cursor: not-allowed;
+}
+
+/* Placeholder */
+::placeholder {
+  color: #94a3b8;
+}
+
+/* Checkbox & radio group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  form {
+    width: 90%;
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100% !important;
+  }
+}
