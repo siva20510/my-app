@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-create-user',
@@ -15,8 +15,27 @@ export class CreateUserComponent {
     address : new FormGroup({
       city : new FormControl(),
       pincode : new FormControl(),
-    })
+    }),
+
+    cards : new FormArray([])
   })
+
+  get cardFormArray(){
+    return this.userForm.get('cards') as FormArray;
+  }
+  addCard(){
+    this.cardFormArray.push(
+      new FormGroup({
+        number : new FormControl(),
+        name : new FormControl(),
+        cvv : new FormControl(),
+      })
+    )
+
+  }
+  deleteCard(i:number){
+    this.cardFormArray.removeAt(i);
+  }
 
   submit(){
     console.log(this.userForm);
