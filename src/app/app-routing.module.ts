@@ -21,6 +21,8 @@ import { WeatherComponent } from'./weather/weather.component';
 import { FormControl,FormGroup } from '@angular/forms';
 import { AuthGuard } from './auth.guard';
 import { NotifyGuard } from './notify.guard';
+import { CreateUserComponent } from './create-user/create-user.component';
+
 const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'dashboard',canActivate:[AuthGuard], component:DashboardComponent,children:[
@@ -39,7 +41,8 @@ const routes: Routes = [
     {path:'Weather',component:WeatherComponent},
     {path:'create-vehicle',canDeactivate:[NotifyGuard], component:CreateVehicleComponent},
     {path:'vehicle-details/:id',component:VehicleDetailsComponent},
-    {path:'edit-vehicle/:id',component:CreateVehicleComponent}
+    {path:'edit-vehicle/:id',component:CreateVehicleComponent},
+    {path:'create-user', component:CreateUserComponent}
 
   ]},
   {path:'',component:LoginComponent},
