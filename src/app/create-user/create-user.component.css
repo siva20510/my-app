@@ -1,175 +1,161 @@
-/* Page */
+/* page background */
 body {
-  font-family: Arial, sans-serif;
-  background: #f1f5f9;
-  margin: 0;
-  padding: 0;
+  background: #f4f7fb;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Title */
-h1 {
+/* heading */
+p:first-child {
   text-align: center;
-  margin: 20px 0;
-  color: #1e293b;
+  font-size: 30px;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 25px;
 }
 
-/* Form container */
+/* form container */
 form {
-  width: 450px;
-  margin: 20px auto;
-  padding: 25px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  width: 700px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Labels */
+/* labels */
 label {
   display: inline-block;
-  width: 130px;
-  margin-bottom: 12px;
+  width: 120px;
+  margin-top: 15px;
   font-weight: 600;
-  color: #334155;
-  vertical-align: top;
+  color: #333;
 }
 
-/* Common styles for all form fields */
-input,
-select,
-textarea {
-  padding: 8px 10px;
+/* inputs */
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+  width: 60%;
+  padding: 10px;
+  margin-top: 10px;
   border: 1px solid #cbd5e1;
   border-radius: 6px;
   outline: none;
   transition: 0.3s;
   font-size: 14px;
-  margin-bottom: 12px;
 }
 
-/* Text based inputs */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-input[type="tel"],
-input[type="url"],
-input[type="search"],
-input[type="date"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="color"],
-input[type="file"],
-input[type="range"],
-input[type="hidden"],
-input[type="image"],
-input[type="reset"],
-input[type="button"],
-input[type="submit"],
-select,
-textarea {
-  width: 220px;
+/* input focus */
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.4);
 }
 
-/* Textarea */
-textarea {
-  resize: vertical;
-  min-height: 80px;
+/* validation messages */
+p.ng-invalid,
+div p {
+  color: red;
+  font-size: 13px;
+  margin-left: 125px;
+  margin-top: 4px;
 }
 
-/* Focus effect */
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 5px rgba(59,130,246,0.3);
+/* radio buttons */
+input[type="radio"] {
+  margin-top: 20px;
+  margin-right: 5px;
 }
 
-/* Radio and checkbox */
-input[type="radio"],
-input[type="checkbox"] {
-  width: auto;
-  margin-right: 6px;
-  cursor: pointer;
-}
-
-/* File input */
-input[type="file"] {
-  background: #f8fafc;
-  cursor: pointer;
-}
-
-/* Color input */
-input[type="color"] {
-  height: 40px;
-  padding: 2px;
-  cursor: pointer;
-}
-
-/* Range input */
-input[type="range"] {
-  cursor: pointer;
-}
-
-/* Buttons */
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
+/* buttons */
 button {
-  width: 100%;
-  padding: 10px;
-  background: #10b981;
-  color: white;
+  padding: 8px 15px;
+  margin-top: 15px;
   border: none;
   border-radius: 6px;
+  background: #2563eb;
+  color: white;
   cursor: pointer;
-  font-size: 16px;
   transition: 0.3s;
-  margin-top: 10px;
+  font-size: 14px;
 }
 
-/* Hover effect */
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
 button:hover {
-  background: #059669;
+  background: #1d4ed8;
 }
 
-/* Disabled fields */
-input:disabled,
-select:disabled,
-textarea:disabled {
-  background: #e2e8f0;
-  cursor: not-allowed;
+/* delete button */
+button:last-child {
+  background: #dc2626;
 }
 
-/* Placeholder */
-::placeholder {
-  color: #94a3b8;
+button:last-child:hover {
+  background: #b91c1c;
 }
 
-/* Checkbox & radio group */
-.form-group {
-  margin-bottom: 15px;
+/* card section */
+[formarrayname="cards"] {
+  margin-top: 20px;
 }
 
-/* Responsive */
-@media (max-width: 500px) {
+[formgroupname] {
+  background: #f8fafc;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+/* card heading */
+h4 {
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+/* hr line */
+hr {
+  margin-top: 15px;
+  border: none;
+  border-top: 1px solid #d1d5db;
+}
+
+/* submit button */
+input[type="submit"] {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #16a34a;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  background: #15803d;
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
   form {
-    width: 90%;
+    width: 95%;
+    padding: 20px;
   }
 
   label {
-    display: block;
     width: 100%;
-    margin-bottom: 5px;
   }
 
-  input,
-  select,
-  textarea {
-    width: 100% !important;
+  input[type="text"],
+  input[type="number"],
+  input[type="email"] {
+    width: 100%;
+  }
+
+  div p {
+    margin-left: 0;
   }
 }
