@@ -24,6 +24,8 @@ import { WeatherComponent } from './weather/weather.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { CreateUserComponent } from './create-user/create-user.component';
     WeatherComponent,
     CreateVehicleComponent,
     VehicleDetailsComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
