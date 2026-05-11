@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, MaxLengthValidator, Validators } from '@angular/forms';
 import { VehicleService } from '../vehicle.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Vehicle } from '../vehicle';
@@ -10,13 +10,13 @@ import { Vehicle } from '../vehicle';
 })
 export class CreateVehicleComponent {
   vehicleForm: FormGroup = new FormGroup({
-    Vehicle: new FormControl(),
-    manufacturer: new FormControl(),
-    model: new FormControl(),
-    type: new FormControl(),
-    fuel: new FormControl(),
-    color: new FormControl(),
-    image: new FormControl(),
+    Vehicle: new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(10)]),
+    manufacturer: new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(10)]),
+    model: new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(10)]),
+    type: new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(10)]),
+    fuel: new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(10)]),
+    color: new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(10)]),
+    image: new FormControl("",[Validators.required]),
   });
 
   id:string="";
