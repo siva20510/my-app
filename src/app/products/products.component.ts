@@ -87,6 +87,8 @@ TotalCart(){
 delete(i:number){
 i == 0 ? this.products.splice(0,1):this.products.splice(1,1);
 }
-
+updateRating(number:number){
+  alert(number);
+}
 
 }
