@@ -26,6 +26,7 @@ import { ParentComponent } from './parent/parent.component';
 import { CartComponent } from './cart/cart.component';
 import { ItemsComponent } from './items/items.component';
 import { NavComponent } from './nav/nav.component';
+import { ContactSalesComponent } from './contact-us/contact-sales/contact-sales.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -50,7 +51,8 @@ const routes: Routes = [
     {path:'parent',component:ParentComponent},
     {path:'cart',component:CartComponent},
     {path:'items', component:ItemsComponent},
-    {path:'nav',component:NavComponent}
+    {path:'nav',component:NavComponent},
+    {path:'contact-sales',component:ContactSalesComponent}
 
   ]},
   {path:'',component:LoginComponent},
