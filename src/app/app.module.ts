@@ -30,6 +30,7 @@ import { RatingComponent } from './rating/rating.component';
 import { CartComponent } from './cart/cart.component';
 import { ItemsComponent } from './items/items.component';
 import { NavComponent } from './nav/nav.component';
+import { ContactUsModule } from './contact-us/contact-us.module';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { NavComponent } from './nav/nav.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ContactUsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
