@@ -8,6 +8,7 @@ import { Vehicle } from './vehicle';
 })
 export class VehicleService {
   baseUrl:string="https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction";
+  //baseUrl:string="/assets/vehicles.json";
 
   constructor(private httpClient:HttpClient) { }
 

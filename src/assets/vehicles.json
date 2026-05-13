@@ -1,0 +1,38 @@
+[
+     {
+    "Vehicle": "Citroën Model X",
+    "manufacturer": "Lamborghini",
+    "model": "Land Cruiser",
+    "type": "Cargo Van",
+    "fuel": "Diesel",
+    "color": "green",
+    "image": "https://picsum.photos/seed/Q42PA/2049/1952",
+    "cost": "120.65",
+    "tyres": 0,
+    "id": "7"
+  },
+  {
+    "Vehicle": "Suzuki XC90",
+    "manufacturer": "Ferrari",
+    "model": "A4",
+    "type": "Wagon",
+    "fuel": "Electric",
+    "color": "olive",
+    "image": "https://picsum.photos/seed/VhSaAh2/968/338",
+    "cost": "246.32",
+    "tyres": 34,
+    "id": "8"
+  },
+  {
+    "Vehicle": "Toyota XC90",
+    "manufacturer": "NIO",
+    "model": "V90",
+    "type": "Passenger Van",
+    "fuel": "Gasoline",
+    "color": "mint green",
+    "image": "https://picsum.photos/seed/bqHOh/2018/1733",
+    "cost": "87.26",
+    "tyres": 10,
+    "id": "9"
+  }
+]

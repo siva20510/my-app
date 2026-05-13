@@ -52,7 +52,7 @@
     <tr *ngFor="let product of products; let i = index">
       <td>{{ i + 1 }}</td>
       <td>{{ product.productName }}</td>
-      <td>{{ product.price }}</td>
+      <td>{{ product.price | price}}</td>
       <td>
         <app-rating
           [rating]="product.rating"
