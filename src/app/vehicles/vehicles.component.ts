@@ -9,7 +9,6 @@ import { Vehicle } from '../vehicle';
 })
 export class VehiclesComponent {
   vehicles: Vehicle[] = [];
-
   constructor(private vehicleService: VehicleService) {
     vehicleService.getVehicles().subscribe(
       (data: Vehicle[]) => {
