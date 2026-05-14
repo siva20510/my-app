@@ -27,6 +27,7 @@ import { CartComponent } from './cart/cart.component';
 import { ItemsComponent } from './items/items.component';
 import { NavComponent } from './nav/nav.component';
 import { ContactSalesComponent } from './contact-us/contact-sales/contact-sales.component';
+import { FormTaskComponent } from './form-task/form-task.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -53,7 +54,8 @@ const routes: Routes = [
     {path:'items', component:ItemsComponent},
     {path:'nav',component:NavComponent},
     {path:'contact-sales',component:ContactSalesComponent},
-    {path:'payment', loadChildren: ()=>import('./payment/payment.module').then(m=>m.PaymentModule)}
+    {path:'payment', loadChildren: ()=>import('./payment/payment.module').then(m=>m.PaymentModule)},
+    {path:'form-task',component:FormTaskComponent}
 
   ]},
   {path:'',component:LoginComponent},

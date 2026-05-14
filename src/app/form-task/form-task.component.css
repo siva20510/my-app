@@ -1,0 +1,140 @@
+Main Form
+form {
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Heading */
+p {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Labels */
+label {
+  display: inline-block;
+  width: 220px;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs */
+input[type="text"] {
+  width: calc(100% - 240px);
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Input Focus */
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+/* Error Messages */
+p {
+  margin: 4px 0;
+}
+
+div p {
+  color: red;
+  font-size: 13px;
+  margin-left: 220px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 14px;
+  margin: 10px 5px 10px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Delete Buttons */
+button:last-child {
+  background-color: #dc3545;
+}
+
+button:last-child:hover {
+  background-color: #b52a37;
+}
+
+/* Submit Button */
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #1f7d35;
+}
+
+/* Form Sections */
+[formGroupName],
+[formArrayName] {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+/* Review / Image / Tag Cards */
+h4 {
+  margin-top: 10px;
+  color: #007bff;
+}
+
+/* Horizontal Line */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 15px 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  label {
+    width: 100%;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  div p {
+    margin-left: 0;
+  }
+
+  form {
+    width: 95%;
+  }
+} 
