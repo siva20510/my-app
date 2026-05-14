@@ -55,9 +55,12 @@ export class FormTaskComponent {
 
   
   //add tag
+ 
   addTag() {
-    this.tagsFormArray.push(new FormControl({}));
-  }
+  this.tagsFormArray.push(
+    new FormControl('', Validators.required)
+  );
+}
   deleteTag(i: number) {
     this.tagsFormArray.removeAt(i);
   }

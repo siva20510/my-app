@@ -387,7 +387,11 @@
 
         <label for=""> Tag Name:</label>
         <input type="text" formArrayName="tags" />
+         <p *ngIf="tag.touched && tag.errors?.['required']">
+      Tag is required
+    </p>
         <br />
+      
         <button (click)="deleteTag(i)">delete tag</button>
         <hr />
       </div>
