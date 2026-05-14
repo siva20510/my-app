@@ -1,0 +1,566 @@
+<p>form-task works!</p>
+<form action="" [formGroup]="productForm" (ngSubmit)="submit()">
+  <label for="">title :</label>
+  <input type="text" formControlName="title" />
+  <br />
+  <div
+    *ngIf="
+      productForm.get('title')?.touched && productForm.get('title')?.invalid
+    "
+  >
+    <p *ngIf="productForm.get('title')?.errors?.['required']">
+      title is required
+    </p>
+    <p *ngIf="productForm.get('title')?.errors?.['minlength']">
+      Min 3 characters
+    </p>
+    <p *ngIf="productForm.get('title')?.errors?.['maxlength']">
+      Min 10 characters
+    </p>
+  </div>
+
+  <label for="">description :</label>
+  <input type="text" formControlName="description" />
+  <br />
+  <div
+    *ngIf="
+      productForm.get('description')?.touched &&
+      productForm.get('description')?.invalid
+    "
+  >
+    <p *ngIf="productForm.get('description')?.errors?.['required']">
+      description is required
+    </p>
+    <p *ngIf="productForm.get('description')?.errors?.['minlength']">
+      Min 3 characters
+    </p>
+    <p *ngIf="productForm.get('description')?.errors?.['maxlength']">
+      Min 10 characters
+    </p>
+  </div>
+
+  <label for="">category :</label>
+  <input type="text" formControlName="category" />
+  <br />
+  <div
+    *ngIf="
+      productForm.get('category')?.touched &&
+      productForm.get('category')?.invalid
+    "
+  >
+    <p *ngIf="productForm.get('category')?.errors?.['required']">
+      category is required
+    </p>
+    <p *ngIf="productForm.get('category')?.errors?.['minlength']">
+      Min 3 characters
+    </p>
+    <p *ngIf="productForm.get('category')?.errors?.['maxlength']">
+      Min 10 characters
+    </p>
+  </div>
+
+  <label for="">price :</label>
+  <input type="number" formControlName="price" />
+  <br />
+  <div
+    *ngIf="
+      productForm.get('price')?.touched && productForm.get('price')?.invalid
+    "
+  >
+    <p *ngIf="productForm.get('price')?.errors?.['required']">
+      price is required
+    </p>
+  </div>
+
+  <label for="">discountPercentage :</label>
+  <input type="text" formControlName="discountPercentage" />
+  <br />
+  <div
+    *ngIf="
+      productForm.get('discountPercentage')?.touched &&
+      productForm.get('discountPercentage')?.invalid
+    "
+  >
+    <p *ngIf="productForm.get('discountPercentage')?.errors?.['required']">
+      discountPercentage is required
+    </p>
+  </div>
+
+  <label for="">rating :</label>
+  <input type="text" formControlName="rating" />
+  <br />
+  <div
+    *ngIf="
+      productForm.get('rating')?.touched && productForm.get('rating')?.invalid
+    "
+  >
+    <p *ngIf="productForm.get('rating')?.errors?.['required']">
+      rating is required
+    </p>
+  </div>
+
+  <label for="">stock :</label>
+  <input type="text" formControlName="stock" />
+  <br />
+  <div
+    *ngIf="
+      productForm.get('stock')?.touched && productForm.get('stock')?.invalid
+    "
+  >
+    <p *ngIf="productForm.get('stock')?.errors?.['required']">
+      stock is required
+    </p>
+  </div>
+
+  <label for="">brand :</label>
+  <input type="text" formControlName="brand" />
+  <br />
+  <div
+    *ngIf="
+      productForm.get('brand')?.touched && productForm.get('brand')?.invalid
+    "
+  >
+    <p *ngIf="productForm.get('brand')?.errors?.['required']">
+      brand is required
+    </p>
+  </div>
+
+  <label for="">sku :</label>
+  <input type="text" formControlName="sku" />
+  <br />
+  <div
+    *ngIf="productForm.get('sku')?.touched && productForm.get('sku')?.invalid"
+  >
+    <p *ngIf="productForm.get('sku')?.errors?.['required']">sku is required</p>
+  </div>
+
+  <label for="">weight :</label>
+  <input type="number" formControlName="weight" />
+  <br />
+  <div
+    *ngIf="
+      productForm.get('weight')?.touched && productForm.get('weight')?.invalid
+    "
+  >
+    <p *ngIf="productForm.get('weight')?.errors?.['required']">
+      weight is required
+    </p>
+  </div>
+  <!-- dimensions object -->
+   <label for="">dimensions  :-</label>
+  <div formGroupName="dimensions">
+    <label for="">width :</label>
+    <input type="number" formControlName="width" />
+    <br />
+    <div
+      *ngIf="
+        productForm.get('dimensions')?.get('width')?.touched &&
+        productForm.get('dimensions')?.get('width')?.invalid
+      "
+    >
+      <p
+        *ngIf="
+          productForm.get('dimensions')?.get('width')?.errors?.['required']
+        "
+      >
+        width is required
+      </p>
+    </div>
+
+    <label for="">height :</label>
+    <input type="number" formControlName="height" />
+    <br />
+    <div
+      *ngIf="
+        productForm.get('dimensions')?.get('height')?.touched &&
+        productForm.get('dimensions')?.get('height')?.invalid
+      "
+    >
+      <p
+        *ngIf="
+          productForm.get('dimensions')?.get('height')?.errors?.['required']
+        "
+      >
+        height is required
+      </p>
+    </div>
+
+    <label for="">depth :</label>
+    <input type="number" formControlName="depth" />
+    <br />
+    <div
+      *ngIf="
+        productForm.get('dimensions')?.get('depth')?.touched &&
+        productForm.get('dimensions')?.get('depth')?.invalid
+      "
+    >
+      <p
+        *ngIf="
+          productForm.get('dimensions')?.get('depth')?.errors?.['required']
+        "
+      >
+        depth is required
+      </p>
+    </div>
+  </div>
+
+  <!-- meta object -->
+   <label for="">Meta  :-</label>
+  <div formGroupName="meta">
+    <label for="">createdAt :</label>
+    <input type="datetime-local" formControlName="createdAt" />
+    <br />
+    <div
+      *ngIf="
+        productForm.get('meta')?.get('createdAt')?.touched &&
+        productForm.get('meta')?.get('createdAt')?.invalid
+      "
+    >
+      <p
+        *ngIf="
+          productForm.get('meta')?.get('createdAt')?.errors?.['required']
+        "
+      >
+        createdAt is required
+      </p>
+    </div>
+
+    <label for="">updatedAt :</label>
+    <input type="datetime-local" formControlName="updatedAt" />
+    <br />
+    <div
+      *ngIf="
+        productForm.get('meta')?.get('updatedAt')?.touched &&
+        productForm.get('meta')?.get('updatedAt')?.invalid
+      "
+    >
+      <p
+        *ngIf="
+          productForm.get('meta')?.get('updatedAt')?.errors?.['required']
+        "
+      >
+        updatedAt is required
+      </p>
+    </div>
+
+    <label for="">barcode :</label>
+    <input type="text" formControlName="barcode" />
+    <br />
+    <div
+      *ngIf="
+        productForm.get('meta')?.get('barcode')?.touched &&
+        productForm.get('meta')?.get('barcode')?.invalid
+      "
+    >
+      <p
+        *ngIf="
+          productForm.get('meta')?.get('barcode')?.errors?.['required']
+        "
+      >
+        barcode is required
+      </p>
+    </div>
+
+    <label for="">qrCode :</label>
+    <input type="text" formControlName="qrCode" />
+    <br />
+    <div
+      *ngIf="
+        productForm.get('meta')?.get('qrCode')?.touched &&
+        productForm.get('meta')?.get('qrCode')?.invalid
+      "
+    >
+      <p
+        *ngIf="
+          productForm.get('meta')?.get('qrCode')?.errors?.['required']
+        "
+      >
+        qrCode is required
+      </p>
+    </div>
+  </div>
+
+  <label for="">warrantyInformation :</label>
+  <input type="text" formControlName="warrantyInformation" />
+  <br />
+  <div
+    *ngIf="
+      productForm.get('warrantyInformation')?.touched &&
+      productForm.get('warrantyInformation')?.invalid
+    "
+  >
+    <p *ngIf="productForm.get('warrantyInformation')?.errors?.['required']">
+      warrantyInformation is required
+    </p>
+  </div>
+
+  <label for="">shippingInformation :</label>
+  <input type="text" formControlName="shippingInformation" />
+  <br />
+  <div
+    *ngIf="
+      productForm.get('shippingInformation')?.touched &&
+      productForm.get('shippingInformation')?.invalid
+    "
+  >
+    <p *ngIf="productForm.get('shippingInformation')?.errors?.['required']">
+      shippingInformation is required
+    </p>
+  </div>
+
+  <label for="">availabilityStatus :</label>
+  <input type="text" formControlName="availabilityStatus" />
+  <br />
+  <div
+    *ngIf="
+      productForm.get('availabilityStatus')?.touched &&
+      productForm.get('availabilityStatus')?.invalid
+    "
+  >
+    <p *ngIf="productForm.get('availabilityStatus')?.errors?.['required']">
+      availabilityStatus is required
+    </p>
+  </div>
+
+  <label for="">returnPolicy :</label>
+  <input type="text" formControlName="returnPolicy" />
+  <br />
+  <div
+    *ngIf="
+      productForm.get('returnPolicy')?.touched &&
+      productForm.get('returnPolicy')?.invalid
+    "
+  >
+    <p *ngIf="productForm.get('returnPolicy')?.errors?.['required']">
+      returnPolicy is required
+    </p>
+  </div>
+
+  <label for="">minimumOrderQuantity :</label>
+  <input type="number" formControlName="minimumOrderQuantity" />
+  <br />
+  <div
+    *ngIf="
+      productForm.get('minimumOrderQuantity')?.touched &&
+      productForm.get('minimumOrderQuantity')?.invalid
+    "
+  >
+    <p *ngIf="productForm.get('minimumOrderQuantity')?.errors?.['required']">
+      minimumOrderQuantity is required
+    </p>
+  </div>
+
+  <label for="">images :</label>
+  <input type="image" formControlName="images" />
+  <br />
+  <div
+    *ngIf="
+      productForm.get('images')?.touched && productForm.get('images')?.invalid
+    "
+  >
+    <p *ngIf="productForm.get('images')?.errors?.['required']">
+      images is required
+    </p>
+  </div>
+
+  <label for="">thumbnail :</label>
+  <input type="text" formControlName="thumbnail" />
+  <br />
+  <div
+    *ngIf="
+      productForm.get('thumbnail')?.touched &&
+      productForm.get('thumbnail')?.invalid
+    "
+  >
+    <p *ngIf="productForm.get('thumbnail')?.errors?.['required']">
+      thumbnail is required
+    </p>
+  </div>
+
+  <!-- tags array -->
+  <label for="">Tags :</label>
+  <button (click)="addTag()">Add tag</button>
+  <div formArrayName="tags">
+    <div *ngFor="let tag of tagsFormArray.controls; let i = index">
+      <div formGroupName="{{ i }}">
+        <h4>Tag {{ i + 1 }}</h4>
+
+        <label for=""> Tag Name:</label>
+        <input type="text" formArrayName="tags" />
+        <br />
+        <button (click)="deleteTag(i)">delete tag</button>
+        <hr />
+      </div>
+    </div>
+  </div>
+  <!--Review array -->
+  <label for="">Review:</label>
+  <button (click)="addReview()">add review</button>
+  <div formArrayName="reviews">
+    <div *ngFor="let review of reviewsFormArray.controls; let i = index">
+      <div formGroupName="{{ i }}">
+        <h4>Review {{ i + 1 }}</h4>
+
+        <label for="">rating :</label>
+        <input type="text" formControlName="rating" />
+        <br />
+        <div
+          *ngIf="
+            reviewsFormArray.controls[i]?.get('rating')?.touched &&
+            reviewsFormArray.controls[i]?.get('rating')?.invalid
+          "
+        >
+          <p
+            *ngIf="
+              reviewsFormArray.controls[i]?.get('rating')?.errors?.['required']
+            "
+          >
+            review is required
+          </p>
+        </div>
+
+        <label for="">comment :</label>
+        <input type="text" formControlName="comment" />
+        <br />
+        <div
+          *ngIf="
+            reviewsFormArray.controls[i]?.get('comment')?.touched &&
+            reviewsFormArray.controls[i]?.get('comment')?.invalid
+          "
+        >
+          <p
+            *ngIf="
+              reviewsFormArray.controls[i]?.get('comment')?.errors?.['required']
+            "
+          >
+            comment is required
+          </p>
+        </div>
+
+        <label for="">date :</label>
+        <input type="date" formControlName="date" />
+        <br />
+        <div
+          *ngIf="
+            reviewsFormArray.controls[i]?.get('date')?.touched &&
+            reviewsFormArray.controls[i]?.get('date')?.invalid
+          "
+        >
+          <p
+            *ngIf="
+              reviewsFormArray.controls[i]?.get('date')?.errors?.['required']
+            "
+          >
+            Date is required
+          </p>
+        </div>
+
+        <label for="">reviewerName :</label>
+        <input type="text" formControlName="reviewerName" />
+        <br />
+        <div
+          *ngIf="
+            reviewsFormArray.controls[i]?.get('reviewerName')?.touched &&
+            reviewsFormArray.controls[i]?.get('reviewerName')?.invalid
+          "
+        >
+          <p
+            *ngIf="
+              reviewsFormArray.controls[i]?.get('reviewerName')?.errors?.[
+                'required'
+              ]
+            "
+          >
+            reviewerName is required
+          </p>
+        </div>
+
+        <label for="">reviewerEmail :</label>
+        <input type="email" formControlName="reviewerEmail" />
+        <br />
+        <div
+          *ngIf="
+            reviewsFormArray.controls[i]?.get('reviewerEmail')?.touched &&
+            reviewsFormArray.controls[i]?.get('reviewerEmail')?.invalid
+          "
+        >
+          <p
+            *ngIf="
+              reviewsFormArray.controls[i]?.get('reviewerEmail')?.errors?.[
+                'required'
+              ]
+            "
+          >
+            reviewerEmail is required
+          </p>
+        </div>
+
+        <button (click)="deleteReview(i)">delete review</button>
+        <hr />
+      </div>
+    </div>
+  </div>
+
+  <!-- Images array -->
+  <label for="">Image :</label>
+  <button (click)="addImage()">Add Image</button>
+  <div formArrayName="images">
+    <div *ngFor="let image of imagesFormArray.controls; let i = index">
+      <div formGroupName="{{ i }}">
+        <h4>Image {{ i + 1 }}</h4>
+
+        <label for=""> Image url:</label>
+        <input type="image" formArrayName="images" placeholder="upload ur image" />
+        <br />
+        <button (click)="deleteImage(i)">delete image</button>
+        <hr />
+      </div>
+    </div>
+  </div>
+
+  <input type="submit" />
+</form>
+<!-- {
+      "tags": [
+        "beauty",
+        "mascara"
+      ],
+      "meta": {
+        "width": 15.14,
+        "height": 13.08,
+        "depth": 22.99
+      },
+      "reviews": [
+        {
+          "rating": 3,
+          "comment": "Would not recommend!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Eleanor Collins",
+          "reviewerEmail": "eleanor.collins@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Very satisfied!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Lucas Gordon",
+          "reviewerEmail": "lucas.gordon@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Highly impressed!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Eleanor Collins",
+          "reviewerEmail": "eleanor.collins@x.dummyjson.com"
+        }
+      ],
+      "meta": {
+        "createdAt": "2025-04-30T09:41:02.053Z",
+        "updatedAt": "2025-04-30T09:41:02.053Z",
+        "barcode": "5784719087687",
+        "qrCode": "https://cdn.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"
+    }, -->
