@@ -387,7 +387,7 @@
 
         <label for=""> Tag Name:</label>
         <input type="text" formArrayName="tags" />
-         <p *ngIf="tag.touched && tag.errors?.['required']">
+         <p *ngIf="tagsFormArray.touched && tagsFormArray.errors?.['required']">
       Tag is required
     </p>
         <br />
